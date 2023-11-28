@@ -1,0 +1,137 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2023-10-26T15:24:31.334-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Enterprise.Preview"
+				},
+				{
+					"PackageIdentifier" : "thomasnordquist.MQTT-Explorer"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.GnuPG"
+				},
+				{
+					"PackageIdentifier" : "GnuPG.Gpg4win"
+				},
+				{
+					"PackageIdentifier" : "Helm.Helm"
+				},
+				{
+					"PackageIdentifier" : "Kubernetes.minikube"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DevHome"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal.Preview"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Office"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
+					"PackageIdentifier" : "Rustlang.Rustup"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams"
+				},
+				{
+					"PackageIdentifier" : "MuhammedKalkan.OpenLens"
+				},
+				{
+					"PackageIdentifier" : "Axosoft.GitKraken"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.6"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.AzureCLI"
+				},
+				{
+					"PackageIdentifier" : "tailscale.tailscale"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode.Insiders"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Azure.StorageExplorer"
+				},
+				{
+					"PackageIdentifier" : "KeePassXCTeam.KeePassXC"
+				},
+				{
+					"PackageIdentifier" : "DEVCOM.JetBrainsMonoNerdFont"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.7"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		},
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "9P5RWLM70SN9"
+				},
+				{
+					"PackageIdentifier" : "9NZCC27PR6N6"
+				},
+				{
+					"PackageIdentifier" : "XP89DCGQ3K6VLD"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier" : "StoreEdgeFD",
+				"Name" : "msstore",
+				"Type" : "Microsoft.Rest"
+			}
+		}
+	],
+	"WinGetVersion" : "1.6.2771"
+}
