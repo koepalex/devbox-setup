@@ -12,5 +12,5 @@ winget import windows\winget_export.json
 
 ```bash
 chmod +x ./almalinux/setup.sh
-./almalinux.sh
+./setup.sh
 ```
