@@ -10,6 +10,10 @@ sudo apt -y install btop cmake gcc make wget curl tree strace mc
 
 echo ">>> Jetbrains mono font installing ..."
 sudo apt install -y fonts-jetbrains-mono 
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+mkdir ~/.local/share/fonts/
+mv JetBrainsMono/*.ttf ~/,local/share/fonts
 
 echo ">>> oh my zsh installing ..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -43,6 +47,8 @@ wget https://packages.microsoft.com/config/ubuntu/$repo_version/packages-microso
 sudo dpkg -i packages-microsoft-prod.deb
 # Clean up
 rm packages-microsoft-prod.deb
+# Delete PMC repository
+sudo rm /etc/apt/sources.list.d/microsoft-prod.list
 # Update packages
 sudo apt update
 sudo apt install -y dotnet-sdk-7.0
@@ -54,3 +60,13 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
+
+echo "dotnet tools installing..."
+sudo mkdir /opt/tools
+sudo chown $USER:users 
+dotnet tool install dotnet-symbol --tool-path /opt/tools
+dotnet tool install dotnet-counters --tool-path /opt/tools
+dotnet tool install dotnet-dump --tool-path /opt/tools
+
+echo "Loading dotnet symbols"
+/opt/tools/dotnet-symbol /usr/lib/dotnet/shared/Microsoft.NETCore.App/7.0.??/*
