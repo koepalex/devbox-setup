@@ -70,3 +70,14 @@ dotnet tool install dotnet-dump --tool-path /opt/tools
 
 echo "Loading dotnet symbols"
 /opt/tools/dotnet-symbol /usr/lib/dotnet/shared/Microsoft.NETCore.App/7.0.??/*
+
+echo "Loading debug symbols"
+# Adding repositories with debug information
+sudo apt install -y software-properties-common
+echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse
+deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse | \
+deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse" | \
+sudo tee -a /etc/apt/sources.list.d/ddebs.list
+sudo apt install -y ubuntu-dbgsym-keyring
+sudo apt update
+sudo apt install -y libc6-dbg libssl3-dbgsym openssl-dbgsym libicu70-dbgsym libstdc++6-dbgsym 
