@@ -81,3 +81,9 @@ sudo tee -a /etc/apt/sources.list.d/ddebs.list
 sudo apt install -y ubuntu-dbgsym-keyring
 sudo apt update
 sudo apt install -y libc6-dbg libssl3-dbgsym openssl-dbgsym libicu70-dbgsym libstdc++6-dbgsym 
+
+echo "Compile perf"
+sudo apt install -y curl gcc make bison flex elfutils libelf-dev libdw-dev libaudit-dev xz-utils
+sudo git clone -b v6.5.13 --single-branch --depth 1 git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git /usr/src/linux
+sudo chown -R $USER:users /usr/src/linux/
+cd /usr/src/linux/tools/perf && make O=/opt/tools/
