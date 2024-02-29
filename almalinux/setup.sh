@@ -59,3 +59,10 @@ nvim :PaqInstall
 "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/coc.nvim
 yarn install
 
+echo ">>> GitHub CLI"
+sudo dnf -y install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf -y install gh
+
+echo ">>> Install pinentry (to generate pgp keys)"
+sudo dnf -y install pinentry
