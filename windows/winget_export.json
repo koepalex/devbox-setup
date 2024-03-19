@@ -1,22 +1,43 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-10-26T15:24:31.334-00:00",
+	"CreationDate" : "2024-03-19T23:44:33.362-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Enterprise.Preview"
+					"PackageIdentifier" : "9PGCV4V3BK4W"
 				},
+				{
+					"PackageIdentifier" : "9P5RWLM70SN9"
+				},
+				{
+					"PackageIdentifier" : "9NZCC27PR6N6"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier" : "StoreEdgeFD",
+				"Name" : "msstore",
+				"Type" : "Microsoft.Rest"
+			}
+		},
+		{
+			"Packages" : 
+			[
 				{
 					"PackageIdentifier" : "thomasnordquist.MQTT-Explorer"
 				},
 				{
-					"PackageIdentifier" : "Docker.DockerDesktop"
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Enterprise.Preview"
 				},
 				{
-					"PackageIdentifier" : "Git.Git"
+					"PackageIdentifier" : "BurntSushi.ripgrep.MSVC"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
 				},
 				{
 					"PackageIdentifier" : "GnuPG.GnuPG"
@@ -29,6 +50,12 @@
 				},
 				{
 					"PackageIdentifier" : "Kubernetes.minikube"
+				},
+				{
+					"PackageIdentifier" : "Kubernetes.kubectl"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Teams"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge"
@@ -58,19 +85,76 @@
 					"PackageIdentifier" : "Rustlang.Rustup"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Teams"
+					"PackageIdentifier" : "Unity.UnityHub"
 				},
 				{
 					"PackageIdentifier" : "MuhammedKalkan.OpenLens"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Enterprise"
+				},
+				{
 					"PackageIdentifier" : "Axosoft.GitKraken"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.6"
+					"PackageIdentifier" : "Microsoft.WindowsVirtualDesktopAgent"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode.Insiders"
+				},
+				{
+					"PackageIdentifier" : "VMware.WorkstationPlayer"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VFSforGit"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsVirtualDesktopBootloader"
+				},
+				{
+					"PackageIdentifier" : "DEVCOM.JetBrainsMonoNerdFont"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
+				},
+				{
+					"PackageIdentifier" : "Neovim.Neovim"
+				},
+				{
+					"PackageIdentifier" : "KeePassXCTeam.KeePassXC"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Azure.StorageExplorer"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AzureCLI"
+				},
+				{
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.64-bit"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsVirtualDesktopAgent"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OpenJDK.11"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
 				},
 				{
 					"PackageIdentifier" : "tailscale.tailscale"
@@ -79,25 +163,13 @@
 					"PackageIdentifier" : "Microsoft.PowerShell"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.6"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode.Insiders"
+					"PackageIdentifier" : "Microsoft.PowerToys"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Azure.StorageExplorer"
-				},
-				{
-					"PackageIdentifier" : "KeePassXCTeam.KeePassXC"
-				},
-				{
-					"PackageIdentifier" : "DEVCOM.JetBrainsMonoNerdFont"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.SDK.7"
@@ -110,28 +182,7 @@
 				"Name" : "winget",
 				"Type" : "Microsoft.PreIndexed.Package"
 			}
-		},
-		{
-			"Packages" : 
-			[
-				{
-					"PackageIdentifier" : "9P5RWLM70SN9"
-				},
-				{
-					"PackageIdentifier" : "9NZCC27PR6N6"
-				},
-				{
-					"PackageIdentifier" : "XP89DCGQ3K6VLD"
-				}
-			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
-				"Identifier" : "StoreEdgeFD",
-				"Name" : "msstore",
-				"Type" : "Microsoft.Rest"
-			}
 		}
 	],
-	"WinGetVersion" : "1.6.2771"
+	"WinGetVersion" : "1.7.10661"
 }
