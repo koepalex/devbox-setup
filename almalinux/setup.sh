@@ -21,7 +21,7 @@ sudo dnf install tmux
 echo "set -g default-shell /bin/zsh" > ~/tmux.conf
 
 echo ">>> dotnet installing ..."
-sudo dnf -y install dotnet-sdk-7.0
+sudo dnf -y install dotnet-sdk-8.0
 dotnet tool install --global dotnet-counters
 cat << \EOF >> ~/.bash_profile
 # Add .NET Core SDK tools
@@ -41,23 +41,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm ls-remote
-nvm install v20.9.0
+nvm install lts
 npm install -g yarn
 
 echo ">>> neovim installing"
 sudo dnf config-manager --set-enabled crb
-sudo dnf -y install ninja-build unzip gettext curl
+sudo dnf -y install ninja-build unzip gettext curl ripgrep
 mkdir src && cd src
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 cd ~/.config
-git clone https://github.com/koepalex/neovim-config.git nvim
-git clone --depth=1 https://github.com/savq/paq-nvim.git \
-    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
-nvim :PaqInstall
-"${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/coc.nvim
-yarn install
+git clone --depth=1 https://github.com/koepalex/NVChad nvim
 
 echo ">>> GitHub CLI"
 sudo dnf -y install 'dnf-command(config-manager)'
