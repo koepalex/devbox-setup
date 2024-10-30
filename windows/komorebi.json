@@ -1,0 +1,113 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.29/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 20,
+  "default_container_padding": 20,
+  "border": true,
+  "border_width": 8,
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "unfocused_border": "Mauve",
+    "bar_accent": "Flamingo"
+  },
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "Terminal (I)",
+          "layout": "VerticalStack",
+          "initial_workspace_rules": [
+            {
+              "id": "WindowsTerminal.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "Editor (II)",
+          "layout": "UltrawideVerticalStack",
+          "workspace_rules": [
+            {
+              "id": "Code - Insiders.exe",
+              "kind": "Exe"
+            },
+            {
+              "id": "devenv.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "Browser (III)",
+          "layout": "Columns",
+          "workspace_rules": [
+            {
+              "id": "msedge.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "Tools (IV)",
+          "layout": "Columns",
+          "workspace_rules": [
+            {
+              "id": "OpenLens.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "Teams (V)",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+              "id": "ms-teams.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "Outlook (VI)",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+              "id": "olk.exe",
+              "kind": "Exe"
+            }
+          ]
+        },
+        {
+          "name": "VII",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "Firefox",
+          "layout": "VerticalStack",
+          "initial_workspace_rules": [
+            {
+              "id": "firefox.exe",
+              "kind": "Exe"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
