@@ -1,0 +1,304 @@
+  2024-12-05T22:32:06.708446Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:32:06.708632Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\yazi\keymaps.toml
+C:\Users\alkopke\.config\yazi\theme.toml
+C:\Users\alkopke\.config\yazi\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:32:10.565290Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:32:10.565712Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\whkdrc
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:32:11.703141Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:32:11.703426Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\gh\config.yml
+C:\Users\alkopke\.config\gh\hosts.yml
+C:\Users\alkopke\.config\gh\state.yml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:37:11.491678Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:37:11.491883Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\yazi\flavors\pack
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:37:11.492721Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:37:11.492936Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\yazi\flavors\-a
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:43:52.925369Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:43:52.925556Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\yazi\keymaps.toml
+C:\Users\alkopke\.config\yazi\theme.toml
+C:\Users\alkopke\.config\yazi\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:51:25.751998Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:51:25.752463Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\.config\whkdrc
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:53:07.505104Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:53:07.505516Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:59:40.815548Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:59:40.815751Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T22:59:46.746716Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T22:59:46.747098Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\.flutter
+C:\Users\alkopke\AppData\Roaming\.flutter_tool_state
+C:\Users\alkopke\AppData\Roaming\debug.log
+C:\Users\alkopke\AppData\Roaming\gnuplot_history
+C:\Users\alkopke\AppData\Roaming\obs-virtualcam.txt
+C:\Users\alkopke\AppData\Roaming\winscp.rnd
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:00:00.986809Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:00:01.514566Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:04:44.900138Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:04:44.900314Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:07:44.643548Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:07:44.643778Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:10:41.314766Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:10:41.314934Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:11:29.709021Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:29.709262Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\test
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:11:29.824773Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:35.802755Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:35.802892Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\asd
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:11:35.907028Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:41.979775Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:41.980314Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:41.980706Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\asd_1
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:11:46.950088Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:46.950628Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:11:46.951011Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\flavors\asd
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:12:18.003060Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:19.330680Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:19.515027Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:40.241885Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:40.946502Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:41.147358Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:41.313826Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:46.737382Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:47.522203Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:12:48.872899Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:13:54.162563Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:13:54.162838Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:13:55.722235Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:13:56.457268Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:13:56.658102Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:13:56.809999Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:14:02.050076Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:14:02.226550Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:14:02.394292Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:17:16.187510Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:17:16.187702Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:18:19.306114Z ERROR yazi_plugin::utils::log: "Spawn `file` command returns nil"
+    at yazi-plugin\src\utils\log.rs:20
+
+  2024-12-05T23:18:19.306514Z ERROR yazi_scheduler::prework::prework: Returned 0 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:31.778790Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:34.108778Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:34.927937Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:36.004340Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:38.335870Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:39.509668Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:40.609724Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:41.677604Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:41.962218Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:42.748745Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\state\.dds
+C:\Users\alkopke\AppData\Roaming\yazi\state\yazi.log
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:25:56.150111Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:26:02.548238Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
+  2024-12-05T23:26:02.568903Z ERROR yazi_scheduler::prework::prework: Returned 2 when running fetcher `mime` with:
+C:\Users\alkopke\AppData\Roaming\yazi\config\keymaps.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\theme.toml
+C:\Users\alkopke\AppData\Roaming\yazi\config\yazi.toml
+    at yazi-scheduler\src\prework\prework.rs:49
+
