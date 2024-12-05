@@ -895,9 +895,37 @@ $env.config = {
             mode: emacs
             event: { edit: selectall }
         }
+        {
+            name: open_helix_with_fzf_search
+            modifier: control
+            mode: [emacs vi_normal vi_insert]
+            keycode: char_t
+            event: {
+                send: executehostcommand,
+                cmd: "hx (fd --hidden --type=f --strip-cwd-prefix -E .git -E bin -E obj -E '*.dll,*.zip,*.bin,*.gz' | fzf --preview 'bat --color=always -n --line-range :500 {}')"
+            }
+        }
+        {
+            name: open_directory_with_fzf_search
+            modifier: alt
+            mode: [emacs vi_normal vi_insert]
+            keycode: char_c
+            event: {
+                send: executehostcommand,
+                cmd: "cd (fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview 'eza --tree --icons=always --color=always {}')"
+            }
+        }
     ]
 }
 use ~/.cache/starship/init.nu
 source ~/.cache/carapace/init.nu
 
 alias code = code-insiders .
+alias c = clear
+alias e = exit
+alias ll = eza --long --color=always --icons=always --no-user
+alias gs = git status -s
+alias ga = git add .
+alias gl = git log --oneline --graph --all
+alias y = yazi
+alias z = zoxide
