@@ -929,6 +929,7 @@ alias ga = git add .
 alias glog = git log --oneline --graph --all
 alias gd = git diff
 alias gp = git push
+alias gc = git commit -m 
 alias y = yazi
 
 source ~/.cache/zoxide/init.nu
