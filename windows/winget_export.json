@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-12-06T00:30:39.891-00:00",
+	"CreationDate" : "2024-12-06T12:58:52.195-00:00",
 	"Sources" : 
 	[
 		{
@@ -275,6 +275,9 @@
 				},
 				{
 					"PackageIdentifier" : "Axosoft.GitKraken"
+				},
+				{
+					"PackageIdentifier" : "hpjansson.Chafa"
 				},
 				{
 					"PackageIdentifier" : "junegunn.fzf"
