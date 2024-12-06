@@ -912,7 +912,7 @@ $env.config = {
             keycode: char_c
             event: {
                 send: executehostcommand,
-                cmd: "cd (fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview 'eza --tree --icons=always --color=always {}')"
+                cmd: "z (fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview 'eza --tree --icons=always --color=always {}')"
             }
         }
     ]
@@ -926,6 +926,9 @@ alias e = exit
 alias ll = eza --long --color=always --icons=always --no-user
 alias gs = git status -s
 alias ga = git add .
-alias gl = git log --oneline --graph --all
+alias glog = git log --oneline --graph --all
+alias gd = git diff
+alias gp = git push
 alias y = yazi
-alias z = zoxide
+
+source ~/.cache/zoxide/init.nu
