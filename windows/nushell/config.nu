@@ -895,9 +895,58 @@ $env.config = {
             mode: emacs
             event: { edit: selectall }
         }
+        {
+            name: open_helix_with_fzf_search
+            modifier: control
+            mode: [emacs vi_normal vi_insert]
+            keycode: char_t
+            event: {
+                send: executehostcommand,
+                cmd: "hx (fd --hidden --type=f --strip-cwd-prefix -E .git -E bin -E obj -E '*.dll,*.zip,*.bin,*.gz' | fzf --preview 'bat --color=always -n --line-range :500 {}')"
+            }
+        }
+        {
+            name: open_directory_with_fzf_search
+            modifier: alt
+            mode: [emacs vi_normal vi_insert]
+            keycode: char_c
+            event: {
+                send: executehostcommand,
+                cmd: "z (fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview 'eza --tree --icons=always --color=always {}')"
+            }
+        }
+        {
+            name: open_helix_with_fzf_search_content
+            modifier: control
+            mode: [emacs vi_normal vi_insert]
+            keycode: char_f
+            event: {
+                send: executehostcommand,
+                cmd: "hx (rg --hidden $searchword | fzf --preview 'bat --color=always -n --line-range :500 {}')"
+            }
+        }
     ]
 }
 use ~/.cache/starship/init.nu
 source ~/.cache/carapace/init.nu
 
 alias code = code-insiders .
+alias c = clear
+alias e = exit
+alias ll = eza --long --color=always --icons=always --no-user
+alias gs = git status -s
+alias ga = git add .
+alias glog = git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit
+alias gd = git diff
+alias gp = git push
+alias gc = git commit -m 
+alias y = yazi
+
+source ~/.cache/zoxide/init.nu
+
+def test [pattern]: {
+    let result = nu -c ($"rg --hidden --color=always --line-number --no-heading --smart-case ($pattern) | fzf --ansi --delimiter : --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:+20'")
+    let output = ($result | split column ":" | take 1 | rename filename linenumber)
+    hx $"($output.filename.0):($output.linenumber.0)"
+}
+alias sw = test 
