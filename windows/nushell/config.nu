@@ -936,7 +936,7 @@ alias e = exit
 alias ll = eza --long --color=always --icons=always --no-user
 alias gs = git status -s
 alias ga = git add .
-alias glog = git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit
+alias glog = git log --oneline --graph --all
 alias gd = git diff
 alias gp = git push
 alias gc = git commit -m 
@@ -944,9 +944,11 @@ alias y = yazi
 
 source ~/.cache/zoxide/init.nu
 
+
 def test [pattern]: {
     let result = nu -c ($"rg --hidden --color=always --line-number --no-heading --smart-case ($pattern) | fzf --ansi --delimiter : --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:+20'")
     let output = ($result | split column ":" | take 1 | rename filename linenumber)
     hx $"($output.filename.0):($output.linenumber.0)"
 }
 alias sw = test 
+
