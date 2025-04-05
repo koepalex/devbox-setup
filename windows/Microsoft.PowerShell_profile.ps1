@@ -30,7 +30,11 @@ function Invoke-GitCommit { git commit -m  }
 Set-Alias gct Invoke-GitCommit
 function Open-Folder-With-Fzf { z (fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview 'eza --tree --icons=always --color=always {}') }
 Set-Alias ofo Open-Folder-With-Fzf
-function Open-File-With-Fzf ($pattern) { ed (rg --hidden --color=always --line-number --no-heading --smart-case ($pattern) | fzf --ansi --delimiter : --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:+20') }
+function Open-File-With-Fzf ($pattern) { 
+    $tmp = (rg --hidden --color=always --line-number --no-heading --smart-case ($pattern) | fzf --ansi --delimiter : --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:+20')
+    $parts = $tmp -split ":"
+    ed $parts[0]:$parts[1]
+}
 Set-Alias ofi Open-File-With-Fzf
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
