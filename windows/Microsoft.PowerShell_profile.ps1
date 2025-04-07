@@ -33,7 +33,7 @@ Set-Alias ofo Open-Folder-With-Fzf
 function Open-File-With-Fzf ($pattern) { 
     $tmp = (rg --hidden --color=always --line-number --no-heading --smart-case ($pattern) | fzf --ansi --delimiter : --preview 'bat --color=always {1} --highlight-line {2} --line-range {2}:+20')
     $parts = $tmp -split ":"
-    ed $parts[0]:$parts[1]
+    ed $($parts[0]) +$($parts[1])
 }
 Set-Alias ofi Open-File-With-Fzf
 
