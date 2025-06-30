@@ -25,6 +25,15 @@ commit() {
   eval "git commit -m $1"
 }
 
+open_folder() { 
+    z `(fd --hidden --type=d --strip-cwd-prefix -E .git -E bin -E obj | fzf --preview "eza --tree --all --color=always --icons=always {}")`
+}
+
+open_file() { 
+    tmp=`(rg --hidden --color=always --line-number --no-heading --smart-case "$1" | fzf --ansi --delimiter : --preview "batcat {1} -H {2} --color=always --line-range {2}:+20")`
+    nvim `echo $tmp | cut -d ":" -f 1` +`echo $tmp | cut -d ":" -f 2`
+}
+
 alias z=zoxide
 alias c=clear
 alias ed=nvim
@@ -44,6 +53,10 @@ alias gta=add_tag
 alias gtd=delete_tag
 alias gc=commit
 alias ll="eza --long --color=always --icons=always --no-user"
+alias ofo=open_folder
+alias ofi=open_file
+alias bat=batcat
+alias fd=fdfind
 
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
