@@ -3,7 +3,7 @@ stow_dotfile() {
     local dotfiles=("$@")
     for dotfile in "${dotfiles[@]}"; do
         echo "creating symbolic link for config file $dotfile"
-        stow "$dotfile"
+        stow --target=/home/$USER "$dotfile"
     done
 }
 
