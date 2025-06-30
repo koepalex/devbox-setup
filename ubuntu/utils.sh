@@ -144,6 +144,7 @@ install_k9s() {
 install_kubectl() {
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+    rm kubectl
 }
 
 # Function to install HELM
@@ -157,7 +158,7 @@ install_lazygit() {
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazygit.tar.gz lazygit
     sudo install lazygit -D -t /usr/local/bin/
-    rm lazygit.tar.gz
+    rm lazygit.tar.gz lazygit
 }
 
 # Function to install Lazy Docker
@@ -166,7 +167,7 @@ install_lazydocker() {
     curl -Lo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/releases/download/v${LAZYDOCKER_VERSION}/lazydocker_${LAZYDOCKER_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazydocker.tar.gz lazydocker
     sudo install lazydocker -D -t /usr/local/bin/
-    rm lazydocker.tar.gz
+    rm lazydocker.tar.gz lazydocker
 }
 
 # Function to install dotnet9-sdk
@@ -181,5 +182,5 @@ install_kubectx() {
     curl -Lo kubectx.tar.gz "https://github.com/ahmetb/kubectx/releases/download/v${VERSION}/kubectx_v${VERSION}_linux_x86_64.tar.gz"
     tar xf kubectx.tar.gz kubectx
     sudo install kubectx -D -t /usr/local/bin
-    rm kubectx.tar.gz
+    rm kubectx.tar.gz kubectx
 }
