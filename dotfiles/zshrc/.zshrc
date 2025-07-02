@@ -57,6 +57,7 @@ alias ofo=open_folder
 alias ofi=open_file
 alias bat=batcat
 alias fd=fdfind
+alias lg=lazygit
 
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
