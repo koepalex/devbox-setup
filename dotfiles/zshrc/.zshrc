@@ -34,6 +34,10 @@ open_file() {
     nvim `echo $tmp | cut -d ":" -f 1` +`echo $tmp | cut -d ":" -f 2`
 }
 
+open_all_files() {
+    nvim -p $(rg --files-with-matches $1)
+}
+
 alias z=zoxide
 alias c=clear
 alias ed=nvim
@@ -55,6 +59,7 @@ alias gc=commit
 alias ll="eza --long --color=always --icons=always --no-user"
 alias ofo=open_folder
 alias ofi=open_file
+alias oaf=open_all_files
 alias bat=batcat
 alias fd=fdfind
 alias lg=lazygit
