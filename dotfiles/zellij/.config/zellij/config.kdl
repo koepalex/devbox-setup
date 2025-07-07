@@ -395,7 +395,7 @@ theme "catppuccin-mocha"
 // The folder in which Zellij will look for themes
 // (Requires restart)
 //
-theme_dir "./themes"
+// theme_dir "./themes"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
@@ -430,4 +430,4 @@ theme_dir "./themes"
 // Whether to show startup tips on session start
 // Default: true
 //
-// show_startup_tips false
+show_startup_tips false
