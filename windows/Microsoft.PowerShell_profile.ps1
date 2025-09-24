@@ -36,5 +36,9 @@ function Open-File-With-Fzf ($pattern) {
     ed $($parts[0]) +$($parts[1])
 }
 Set-Alias ofi Open-File-With-Fzf
+function Open-All-Findings ($pattern) {
+   rg $pattern -i --vimgrep | ed
+}
+Set-Alias ofa Open-All-Findings
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
