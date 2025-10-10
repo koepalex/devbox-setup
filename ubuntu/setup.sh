@@ -19,78 +19,87 @@ fi
 source packages.conf
 
 # Update the system first
-echo "➡️Updating system..."
+echo "➡️ Updating system..."
 sudo apt update
 sudo apt upgrade -y
 
-echo "➡️Installing system utilities..."
+echo "➡️ Installing system utilities..."
 install_packages "${SYSTEM_UTILS[@]}"
   
-echo "➡️Installing development tools..."
+echo "➡️ Installing development tools..."
 install_packages "${DEV_TOOLS[@]}"
 
-echo "➡️Updating submodules"
+echo "➡️ Updating submodules"
 pushd ..
 git submodule update --recursive --remote
 popd
 
-echo "➡️Installing font..."
+echo "➡️ Installing font..."
 install_font
 
-echo "➡️Installing neovim ..."
+echo "➡️ Installing neovim ..."
 install_neovim
 
-echo "➡️Installing rust ..."
+echo "➡️ Installing rust ..."
 install_rust
 
-echo "➡️Installing rust based packages ..."
+echo "➡️ Installing rust based packages ..."
 install_rust_packages "${RUST_BASED[@]}"
 
-echo "➡️Installing starship Theme ..."
+echo "➡️ Installing starship Theme ..."
 install_starship
 
-echo "➡️Installing carapace ..."
+echo "➡️ Installing carapace ..."
 install_carapace
 
-echo "➡️Installing GitHub CLI ..."
+echo "➡️ Installing GitHub CLI ..."
 install_gh_cli
 
-echo "➡️Installing Go lang ..."
+echo "➡️ Installing Go lang ..."
 install_go
 
-echo "➡️Installing dotnet ..."
+echo "➡️ Installing dotnet ..."
 install_dotnet
 
-echo "➡️Installing NodeJS ..."
+echo "➡️ Installing NodeJS ..."
 install_node
 
-echo "➡️Installing fastfetch ..."
+echo "➡️ Installing fastfetch ..."
 install_fastfetch
 
-echo "➡️Installing operations tooling ..."
+echo "➡️ Installing operations tooling ..."
 install_packages "${OPERATIONS_UTILS[@]}"
 
-echo "➡️Installing kubectl ..."
+echo "➡️ Installing kubectl ..."
 install_kubectl
 
-echo "➡️Installing kubectx and kubens ..."
+echo "➡️ Installing kubectx and kubens ..."
 install_kubectx
 
-echo "➡️Installing helm ..."
+echo "➡️ Installing helm ..."
 install_helm
 
-echo "➡️Installing kubernetes CLI client ..."
+echo "➡️ Installing kubernetes CLI client ..."
 install_k9s
 
-echo "➡️Installing lazygit ..."
+echo "➡️ Installing lazygit ..."
 install_lazygit
 
-echo "➡️Installing lazydocker ..."
+echo "➡️ Installing lazydocker ..."
 install_lazydocker
 
-echo "➡️Setting Default shell to zsh"
+echo "➡️ Setting Default shell to zsh"
 chsh -s /bin/zsh
 sudo chsh -s /bin/zsh
+
+echo "➡️ Installing Docker"
+install_docker
+
+echo "➡️ Changing SSH port to 42069"
+sudo sed -i 's/#Port 22/Port 42069/' /etc/ssh/sshd_config
+
+echo "➡️ Disable root login via SSH"
+sudo sed -i 's/#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
 
 source dotfiles-setup.sh
 
