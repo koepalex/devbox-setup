@@ -105,19 +105,22 @@ source dotfiles-setup.sh
 
 source setup-repos.sh
 
-echo "➡️Clean up unused packages ..."
+echo "➡️ Clean up unused packages ..."
 sudo apt auto-remove -y
 
 # Enable services
-echo "➡️Configuring services..."
+echo "➡️ Configuring services..."
 for service in "${SERVICES[@]}"; do
 if ! systemctl is-enabled "$service" &> /dev/null; then
-  echo "➡️Start and Enabling $service..."
+  echo "➡️ Start and Enabling $service..."
   sudo systemctl start "$service"
   sudo systemctl enable "$service"
 else
-  echo "➡️$service is already enabled"
+  echo "➡️ $service is already enabled"
 fi
 done
 
-echo "➡️Setup complete! You may want to reboot your system."
+echo "➡️ Dry run of unattended upgrades, to verify everything is working as expected"
+sudo unattended-upgrades --dry-run --debug
+
+echo "➡️ Setup complete! You may want to reboot your system."
