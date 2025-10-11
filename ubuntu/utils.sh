@@ -203,3 +203,10 @@ generate_ssh_key() {
         echo "skipped; ed25519 ssh key already exists"
     fi
 }
+
+# Function to install keepass-cli
+install_keepassxc() {
+    sudo add-apt-repository ppa:phoerious/keepassxc -y
+    sudo apt update
+    sudo apt install -y keepassxc
+}

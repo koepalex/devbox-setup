@@ -95,6 +95,9 @@ sudo chsh -s /bin/zsh
 echo "➡️ Installing Docker"
 install_docker
 
+echo "➡️ Installing KeepassXC"
+install_keepassxc
+
 echo "➡️ Generating SSH key is necessary"
 generate_ssh_key
 
