@@ -23,6 +23,24 @@ echo "➡️ Updating system..."
 sudo apt update
 sudo apt upgrade -y
 
+# Ask the user what type of setup this is
+read -p "Is this setup for a development PC or operations PC (homelab)? [dev/ops] (default: dev): " setup_type
+
+# Set default to "dev" if no input is given
+setup_type=${setup_type:-dev}
+
+# Normalize input (lowercase)
+setup_type=$(echo "$setup_type" | tr '[:upper:]' '[:lower:]')
+
+if [[ "$setup_type" == "dev" ]]; then
+    echo "Proceeding with development PC setup..."
+elif [[ "$setup_type" == "ops" ]]; then
+    echo "Proceeding with operations PC (homelab) setup..."
+else
+    echo "Invalid input. Please enter 'dev' or 'ops'."
+    exit 1
+fi
+
 echo "➡️ Installing system utilities..."
 install_packages "${SYSTEM_UTILS[@]}"
   
@@ -40,11 +58,13 @@ install_font
 echo "➡️ Installing neovim ..."
 install_neovim
 
-echo "➡️ Installing rust ..."
-install_rust
+if [[ "$setup_type" == "dev" ]]; then
+  echo "➡️ Installing rust ..."
+  install_rust
 
-echo "➡️ Installing rust based packages ..."
-install_rust_packages "${RUST_BASED[@]}"
+  echo "➡️ Installing rust based packages ..."
+  install_rust_packages "${RUST_BASED[@]}"
+fi
 
 echo "➡️ Installing starship Theme ..."
 install_starship
@@ -55,14 +75,16 @@ install_carapace
 echo "➡️ Installing GitHub CLI ..."
 install_gh_cli
 
-echo "➡️ Installing Go lang ..."
-install_go
+if [[ "$setup_type" == "dev" ]]; then
+  echo "➡️ Installing Go lang ..."
+  install_go
 
-echo "➡️ Installing dotnet ..."
-install_dotnet
+  echo "➡️ Installing dotnet ..."
+  install_dotnet
 
-echo "➡️ Installing NodeJS ..."
-install_node
+  echo "➡️ Installing NodeJS ..."
+  install_node
+fi
 
 echo "➡️ Installing fastfetch ..."
 install_fastfetch
@@ -70,20 +92,22 @@ install_fastfetch
 echo "➡️ Installing operations tooling ..."
 install_packages "${OPERATIONS_UTILS[@]}"
 
-echo "➡️ Installing kubectl ..."
-install_kubectl
+if [[ "$setup_type" == "dev" ]]; then
+  echo "➡️ Installing kubectl ..."
+  install_kubectl
 
-echo "➡️ Installing kubectx and kubens ..."
-install_kubectx
+  echo "➡️ Installing kubectx and kubens ..."
+  install_kubectx
 
-echo "➡️ Installing helm ..."
-install_helm
+  echo "➡️ Installing helm ..."
+  install_helm
 
-echo "➡️ Installing kubernetes CLI client ..."
-install_k9s
+  echo "➡️ Installing kubernetes CLI client ..."
+  install_k9s
 
-echo "➡️ Installing lazygit ..."
-install_lazygit
+  echo "➡️ Installing lazygit ..."
+  install_lazygit
+fi 
 
 echo "➡️ Installing lazydocker ..."
 install_lazydocker
@@ -101,11 +125,13 @@ install_keepassxc
 echo "➡️ Generating SSH key is necessary"
 generate_ssh_key
 
-echo "➡️ Changing SSH port to 42069"
-sudo sed -i 's/#Port 22/Port 42069/' /etc/ssh/sshd_config
+if [[ "$setup_type" == "ops" ]]; then
+  echo "➡️ Changing SSH port to 42069"
+  sudo sed -i 's/#Port 22/Port 42069/' /etc/ssh/sshd_config
 
-echo "➡️ Disable root login via SSH"
-sudo sed -i 's/#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+  echo "➡️ Disable root login via SSH"
+  sudo sed -i 's/#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+fi
 
 source dotfiles-setup.sh
 
