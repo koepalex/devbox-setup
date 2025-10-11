@@ -95,6 +95,9 @@ sudo chsh -s /bin/zsh
 echo "➡️ Installing Docker"
 install_docker
 
+echo "➡️ Generating SSH key is necessary"
+generate_ssh_key
+
 echo "➡️ Changing SSH port to 42069"
 sudo sed -i 's/#Port 22/Port 42069/' /etc/ssh/sshd_config
 

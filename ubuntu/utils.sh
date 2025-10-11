@@ -4,10 +4,10 @@
 is_installed() {
     PACKAGE="$1"
     if dpkg-query -W -f='${Status}' $PACKAGE 2>/dev/null | grep -q "ok installed"; then
-        echo "➡️$PACKAGE is installed"
+        echo "➡️ $PACKAGE is installed"
         return 0
     else
-        echo "➡️$PACKAGE is not installed"
+        echo "➡️ $PACKAGE is not installed"
         return 1
     fi
 }
@@ -24,7 +24,7 @@ install_packages() {
   done
 
   if [ ${#to_install[@]} -ne 0 ]; then
-    echo "➡️Installing: ${to_install[*]}"
+    echo "➡️ Installing: ${to_install[*]}"
     sudo apt install -y "${to_install[@]}"
   fi
 }
@@ -40,7 +40,7 @@ install_rust_packages() {
   done
 
   if [ ${#to_install[@]} -ne 0 ]; then
-    echo "➡️Installing rust based package: ${to_install[*]}"
+    echo "➡️ Installing rust based package: ${to_install[*]}"
     cargo install "${to_install[@]}"
   fi
 }
@@ -192,4 +192,14 @@ install_docker() {
     sudo apt update
     sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     sudo usermod -aG docker ${USER}
+}
+
+# function to check if ssh key exist
+generate_ssh_key() {
+    if ! test -f ~/.ssh/id_25519; then
+        ssh-keygen -t ed25519 -a 32 -C "comment|$HOSTNAME" 
+        echo "ed25519 ssh key generated"
+    else
+        echo "skipped; ed25519 ssh key already exists"
+    fi
 }
