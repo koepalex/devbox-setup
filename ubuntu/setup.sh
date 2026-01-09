@@ -58,13 +58,11 @@ install_font
 echo "➡️ Installing neovim ..."
 install_neovim
 
-if [[ "$setup_type" == "dev" ]]; then
-  echo "➡️ Installing rust ..."
-  install_rust
+echo "➡️ Installing rust ..."
+install_rust
 
-  echo "➡️ Installing rust based packages ..."
-  install_rust_packages "${RUST_BASED[@]}"
-fi
+echo "➡️ Installing rust based packages ..."
+install_rust_packages "${RUST_BASED[@]}"
 
 echo "➡️ Installing starship Theme ..."
 install_starship
