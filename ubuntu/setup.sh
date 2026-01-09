@@ -129,6 +129,9 @@ if [[ "$setup_type" == "ops" ]]; then
 
   echo "➡️ Disable root login via SSH"
   sudo sed -i 's/#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+
+  echo "➡️ Ensure keymappings are working via SSH"
+  echo "export TERM=xterm-256color" >> ../dotfiles/zshrc/.zshenv
 fi
 
 source dotfiles-setup.sh
