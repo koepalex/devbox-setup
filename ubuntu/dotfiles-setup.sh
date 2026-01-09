@@ -13,7 +13,7 @@ if [ ! -f "dotfiles.conf" ]; then
   exit 1
 fi
 
-source packages.conf
+source dotfiles.conf
 
 pushd ../dotfiles 
 echo "Installing dotfiles"

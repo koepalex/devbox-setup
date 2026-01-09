@@ -135,7 +135,9 @@ fi
 
 source dotfiles-setup.sh
 
-source setup-repos.sh
+if [[ "$setup_type" == "dev" ]]; then
+  source setup-repos.sh
+fi
 
 echo "➡️ Clean up unused packages ..."
 sudo apt auto-remove -y
